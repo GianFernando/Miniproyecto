@@ -37,7 +37,6 @@ while True: # Sigue preguntando hasta que el usuario ingrese una cantidad válid
     if response.isdecimal() and (0 < int(response) <= 100):
         numBDays = int(response)
         break # El usuario ha ingresado una cantidad válida
-print()
 
 # Generar y mostrar los cumpleaños:
 print('Aquí están', numBDays, 'Cumpleaños:')
@@ -49,8 +48,6 @@ for i, birthday in enumerate(birthdays):
     monthName = MONTHS[birthday.month - 1]
     dateText = '{} {}'.format(monthName, birthday.day)
     print(dateText, end='')
-print()
-print()
 
 # Determine si hay dos cumpleaños que coincidan.
 match = getMatch(birthdays)
@@ -63,7 +60,6 @@ if match != None:
     print('varias personas tienen un cumpleaños en', dateText)
 else:
     print('no hay cumpleaños coincidentes.')
-print()
 
 # Ejecute 100,000 simulaciones:
 print('Generating', numBDays, 'cumpleaños aleatorios 100.000 veces...')

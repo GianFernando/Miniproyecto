@@ -1,8 +1,4 @@
 import datetime, random
-from gzip import READ
-from tracemalloc import start
-from urllib import response
-
 
 def getBirthdays(numberOfBirthdays):
     birthdays = []
@@ -53,7 +49,7 @@ for i, birthday in enumerate(birthdays):
 match = getMatch(birthdays)
 
 # Mostrar los resultados:
-print('En esta simulacion, ', end='')
+print(' En esta simulacion, ', end='')
 if match != None:
     monthName = MONTHS[match.month - 1]
     dateText = '{} {}'.format(monthName, match.day)
@@ -62,7 +58,7 @@ else:
     print('no hay cumpleaños coincidentes.')
 
 # Ejecute 100,000 simulaciones:
-print('Generating', numBDays, 'cumpleaños aleatorios 100.000 veces...')
+print('Generando', numBDays, 'cumpleaños aleatorios 100.000 veces...')
 input('Presiona Enter para comenzar...')
 
 print('Hagamos otras 100.000 simulaciones.')
